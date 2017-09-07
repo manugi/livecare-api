@@ -2,6 +2,7 @@
 
 <h3>Usage</h3>
 
+<pre>
 $livecare = new \Fasys\FSLiveCare('username', 'password');
 
 $azienda = array(
@@ -27,3 +28,4 @@ var_dump($livecare->editAzienda($azienda);
 
 //GET SESSION
 var_dump($livecare->getSession(1));
+</pre>
