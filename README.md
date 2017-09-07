@@ -1,6 +1,6 @@
-LiveCare API
+<h1>LiveCare API</h1>
 
-<h1>Usage</h1>
+<h3>Usage</h3>
 
 $livecare = new \Fasys\FSLiveCare('username', 'password');
 
