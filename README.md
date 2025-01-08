@@ -35,6 +35,9 @@ $args["action"] = $action; //SET or ADD
 $livecare_array = $livecare->rechargePutAzienda($args);
 $result_code = $livecare_array[0]; //MUST BE 0 TO CONFIRM THE RECHARGE
 
+//GET CREDIT
+$livecare->rechargeGetAzienda($azienda);
+
 //GET SESSION
 var_dump($livecare->getSession(1));
 </pre>
