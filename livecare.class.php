@@ -1,15 +1,15 @@
 <?php
 /*
- * LiveCare Support API 1.0
+ * LiveCare Support API 1.1
 
- * @author mariani
- * @twitter andreamariani2k
- * @company fasys.it
- * @package zero.fasys
- * @version 0.1
+ * @author manugi
+ * @twitter smartware_it
+ * @company smartware.it
+ * @package zero.smartware
+ * @version 0.2
 
  *** USO ***
- $livecare = new \Fasys\FSLiveCare('username', 'password');
+ $livecare = new \Smartware\LiveCareApi('username', 'password');
 
 	$azienda = array(
 			'external_id' => '100000',
@@ -34,6 +34,12 @@
 
 	//GET SESSION
 	var_dump($livecare->getSession(1));
+
+ 	//RECHARGE AZIENDA PUT
+  	$livecare->rechargePutAzienda($args);
+
+    	//RECHARGE AZIENDA GET
+  	$livecare->rechargeGetAzienda($args);
 	*** USO ***
  */
 
