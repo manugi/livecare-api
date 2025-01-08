@@ -35,11 +35,11 @@
 	//GET SESSION
 	var_dump($livecare->getSession(1));
 
- 	//RECHARGE AZIENDA PUT
+ 	//RECHARGE PUT AZIENDA 
   	$livecare->rechargePutAzienda($args);
 
-    	//RECHARGE AZIENDA GET
-  	$livecare->rechargeGetAzienda($args);
+    	//RECHARGE GET AZIENDA
+  	$livecare->rechargeGetAzienda($azienda);
 	*** USO ***
  */
 
