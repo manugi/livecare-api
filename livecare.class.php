@@ -23,8 +23,11 @@
 	);
 
 
-	//GETAZIENDA
+	//GET AZIENDA
 	$livecare->getAzienda('100000');
+
+ 	//GET AZIENDE elenca tutte le aziende e i loro parametri
+	$livecare->getAziende();
 
 	//ADD AZIENDA
 	$livecare->addAzienda($azienda);
@@ -32,7 +35,7 @@
 	//EDIT AZIENDA
 	var_dump($livecare->editAzienda($azienda);
 
-	//GET SESSION
+ 	//GET SESSION
 	var_dump($livecare->getSession(1));
 
  	//RECHARGE PUT AZIENDA 
@@ -157,6 +160,17 @@ class LiveCareApi {
   public function getAzienda($external_id) {
   	$output = $this->curl(
       'company?external_id='.$external_id,
+      'GET'
+    );
+    if($output){
+      return json_decode($output, true);
+    }
+    return $output;
+ }
+
+public function getAziende() {
+  	$output = $this->curl(
+      'company?allcompanies',
       'GET'
     );
     if($output){
