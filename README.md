@@ -20,6 +20,9 @@ $azienda = array(
 //GETAZIENDA
 $livecare->getAzienda('100000');
 
+//GETAZIENDE
+$livecare->getAziende();
+
 //ADD AZIENDA
 $livecare->addAzienda($azienda);
 
