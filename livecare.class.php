@@ -8,43 +8,43 @@
  * @package zero.smartware
  * @version 0.2
 
- *** USO ***
+ *** INIZIO DESCRIZIONE FUNZIONI ***
  $livecare = new \Smartware\LiveCareApi('username', 'password');
 
-	$azienda = array(
-			'external_id' => '100000',
-			'company' => 'Company12345',
-			'email' => '',
-			'vat' => '11111111111',
-			'contract_type' => '0',
-			'contract_expiration' => '',
-			'contract_code' => '',
-			'contract_blocked' => ''
-	);
+$azienda = array(
+	'external_id' => '100000',
+	'company' => 'Company12345',
+	'email' => '',
+	'vat' => '11111111111',
+	'contract_type' => '0',
+	'contract_expiration' => '',
+	'contract_code' => '',
+	'contract_blocked' => ''
+);
 
+//GET AZIENDA
+$livecare->getAzienda('100000');
 
-	//GET AZIENDA
-	$livecare->getAzienda('100000');
+//GET AZIENDE elenca tutte le aziende e i loro parametri
+$livecare->getAziende();
 
- 	//GET AZIENDE elenca tutte le aziende e i loro parametri
-	$livecare->getAziende();
+//ADD AZIENDA
+$livecare->addAzienda($azienda);
 
-	//ADD AZIENDA
-	$livecare->addAzienda($azienda);
+//EDIT AZIENDA
+$livecare->editAzienda($azienda);
 
-	//EDIT AZIENDA
-	var_dump($livecare->editAzienda($azienda);
+//GET SESSION
+$livecare->getSession(1);
 
- 	//GET SESSION
-	var_dump($livecare->getSession(1));
+//RECHARGE PUT AZIENDA 
+$livecare->rechargePutAzienda($args);
 
- 	//RECHARGE PUT AZIENDA 
-  	$livecare->rechargePutAzienda($args);
+//RECHARGE GET AZIENDA
+$livecare->rechargeGetAzienda($azienda);
+*** FINE DESCRIZIONE FUNZIONI ***
 
-    	//RECHARGE GET AZIENDA
-  	$livecare->rechargeGetAzienda($azienda);
-	*** USO ***
- */
+*/
 
 namespace Smartware;
 
